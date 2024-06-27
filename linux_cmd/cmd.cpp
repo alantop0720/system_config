@@ -31,7 +31,7 @@ int main(int argc, char *argv[]) {
     getcwd(buff, sizeof(buff));
     std::string buffStr(buff);     
     std::string programName = argv[0];
-    std::string output = buffStr + "/" +  programName + ".db";
+    std::string output =  "/home/cmd/" +  programName + ".db";
     std::list<CommandInfo> commandList;
     std::ifstream file(output);  // 替换为实际的文件名
 
