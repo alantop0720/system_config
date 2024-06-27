@@ -1,0 +1,9 @@
+新建tmux
+0
+tmux new -s dufs
+加载
+0
+tmux ls &&  tmux a -t dufs
+查看
+1
+tmux ls

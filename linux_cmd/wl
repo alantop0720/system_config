@@ -1,0 +1,9 @@
+查看网络连接
+1
+netstat -tnlp
+谁连我
+1
+netstat -ant
+非本机连我
+1
+ss -tan state established | awk '{print $4}' | grep -v '127' | sort

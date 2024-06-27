@@ -26,12 +26,14 @@ void displayCommandWithNewlines(const std::string& command) {
 }
 
 int main(int argc, char *argv[]) {
-
+    if (argc==1)
+    {
+       std::cout << "缺少参数. cmd fhq "  << std::endl;
+       return 1 ;
+    }
     char buff[PATH_MAX];
-    getcwd(buff, sizeof(buff));
-    std::string buffStr(buff);     
-    std::string programName = argv[0];
-    std::string output =  "/home/cmd/" +  programName + ".db";
+    std::string argName = argv[1];
+    std::string output =  "/home/cmd/" +  argName ;
     std::list<CommandInfo> commandList;
     std::ifstream file(output);  // 替换为实际的文件名
 
@@ -73,7 +75,7 @@ int main(int argc, char *argv[]) {
     auto it = commandList.begin();
     std::advance(it, choice - 1);  // 将迭代器移动到用户选择的位置
 
-    if (choice == 2 && it!= commandList.end()) {
+    if (choice == 0 && it!= commandList.end()) {
         displayCommandWithNewlines(it->command);
     } else if (it!= commandList.end()) {
         if (it->flag == 1) {
