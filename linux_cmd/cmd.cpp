@@ -4,6 +4,7 @@
 #include <list>
 #include <string>
 #include <unistd.h>
+#include <limits.h>
 
 // 定义一个结构体来存储每行的信息
 struct CommandInfo {
@@ -26,8 +27,11 @@ void displayCommandWithNewlines(const std::string& command) {
 
 int main(int argc, char *argv[]) {
 
+    char buff[PATH_MAX];
+    getcwd(buff, sizeof(buff));
+    std::string buffStr(buff);     
     std::string programName = argv[0];
-    std::string output = programName + ".db";
+    std::string output = buffStr + "/" +  programName + ".db";
     std::list<CommandInfo> commandList;
     std::ifstream file(output);  // 替换为实际的文件名
 
