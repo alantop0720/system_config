@@ -2,9 +2,7 @@
 #include <fstream>
 #include <string>
 #include <list>
-#include <string>
-#include <unistd.h>
-#include <limits.h>
+#include <windows.h>
 
 // 定义一个结构体来存储每行的信息
 struct CommandInfo {
@@ -26,24 +24,24 @@ void displayCommandWithNewlines(const std::string& command) {
 }
 
 int main(int argc, char *argv[]) {
-    if (argc==1)
-    {
-	    std::ifstream file("readme");
-    	if (file.is_open()) {
-        	std::string line;
-        	while (std::getline(file, line)) {
-            	std::cout << line << std::endl;
-       		 }
-        file.close();
-    } else {
-        std::cerr << "无法打开文件readme" << std::endl;
-        return 1;
+    if (argc == 1) {
+        std::ifstream file("readme.txt");  // Windows 上更常用 ".txt" 扩展名
+        if (file.is_open()) {
+            std::string line;
+            while (std::getline(file, line)) {
+                std::cout << line << std::endl;
+            }
+            file.close();
+        } else {
+            std::cerr << "无法打开文件 readme.txt" << std::endl;
+            return 1;
+        }
+        return 0;
     }
-    return 0;		
-    }
-    char buff[PATH_MAX];
+    
+    char buff[MAX_PATH];
     std::string argName = argv[1];
-    std::string output =  "/home/cmd/" +  argName ;
+    std::string output = std::string(getenv("USERPROFILE")) + "\\cmd\\" + argName;
     std::list<CommandInfo> commandList;
     std::ifstream file(output);  // 替换为实际的文件名
 
@@ -85,11 +83,11 @@ int main(int argc, char *argv[]) {
     auto it = commandList.begin();
     std::advance(it, choice - 1);  // 将迭代器移动到用户选择的位置
 
-    if (choice == 0 && it!= commandList.end()) {
+    if (choice == 0 && it != commandList.end()) {
         displayCommandWithNewlines(it->command);
-    } else if (it!= commandList.end()) {
+    } else if (it != commandList.end()) {
         if (it->flag == 1) {
-            std::system(it->command.c_str());  // 在 Linux 下执行命令
+            std::system(it->command.c_str());  // 在 Windows 下执行命令
         } else {
             std::cout << it->command << std::endl;  // 在屏幕上显示命令
         }

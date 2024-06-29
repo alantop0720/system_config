@@ -34,3 +34,9 @@ systemctl enable firewalld && systemctl is-enabled firewalld
 禁止防火墙开机启动
 1
 systemctl disable firewalld && systemctl is-enabled firewalld
+防火墙配置文件目录
+0
+cd /etc/firewalld/zones
+禁止ip访问指定协议指定端口
+0
+firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="192.168.100.1" port protocol="tcp" port="6379" reject" 

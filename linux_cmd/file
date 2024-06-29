@@ -1,0 +1,6 @@
+查询大于1G大小的文件
+1
+find / -type f -size +1G
+查询home目录大小
+0
+du -sh /home
