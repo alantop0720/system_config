@@ -24,3 +24,7 @@ call plug#end()
 
 map <C-n> :NERDTreeToggle<CR>
 
+nnoremap h ^
+nnoremap l $
+nnoremap j gg
+nnoremap k G
