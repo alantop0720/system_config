@@ -1,0 +1,15 @@
+查看指定进程
+0
+tasklist | findstr /i we
+强制啥指定进程pid
+0
+taskkill /pid 888 /F
+查找端口指定进程
+0
+netsat -ano | findstr "80" && taskkill /findstr /pid 4 /t
+通过文件名杀进程
+0
+taskkill /im wechat.exe /findstr
+永久配置环境变量
+0
+setx alantop "1" /m

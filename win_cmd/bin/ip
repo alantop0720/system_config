@@ -1,0 +1,15 @@
+查看ip
+1
+ipconfig /all | findstr IPv4
+配置路由
+0
+route delete 0.0.0.0 & route -p add 0.0.0.0 mask 0.0.0.0 192.168.2.1 & route -p add 10.0.0.0 mask 255.0.0.0 10.2.3.1 & route -p add 11.0.0.0 mask 255.0.0.0 10.2.3.1
+删除路由
+0
+route delete 0.0.0.0 & route delete 10.0.0.0 & route delete 11.0.0.0
+启用网卡
+0
+net interface set interface "wireless" enabled
+禁用网卡
+0
+net interface set interface "wireless" disabled
