@@ -4,3 +4,9 @@ find / -type f -size +1G
 查询home目录大小
 0
 du -sh /home
+查看分区类型
+1
+df -T
+查看lvm
+1
+pvdisplay
