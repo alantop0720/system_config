@@ -1,7 +1,7 @@
-serverAddr = "111.173.104.235"
+serverAddr = ""
 serverPort = 7000
 auth.method = "token"
-auth.token = "13601994674"
+auth.token = ""
 
 [[proxies]]
 name = "test-tcp"
