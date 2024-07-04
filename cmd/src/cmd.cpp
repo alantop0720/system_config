@@ -85,13 +85,12 @@ int main(int argc, char *argv[]) {
     auto it = commandList.begin();
     std::advance(it, choice - 1);  // 将迭代器移动到用户选择的位置
 
-    if (choice == 0 && it!= commandList.end()) {
-        displayCommandWithNewlines(it->command);
-    } else if (it!= commandList.end()) {
+    if (it!= commandList.end()) {
         if (it->flag == 1) {
             std::system(it->command.c_str());  // 在 Linux 下执行命令
         } else {
-            std::cout << it->command << std::endl;  // 在屏幕上显示命令
+            //std::cout << it->command << std::endl;  // 在屏幕上显示命令
+            displayCommandWithNewlines(it->command);
         }
     } else {
         std::cout << "无效的序列号" << std::endl;
