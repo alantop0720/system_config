@@ -1,6 +1,0 @@
-命令格式如下：
-cmd fhq 防火墙
-cmd net  网络
-cmd tmux tmux
-cmd file 文件目录
-

@@ -18,7 +18,7 @@ call plug#begin()
 
 " List your plugins here
 Plug 'tpope/vim-sensible'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdtree'
 call plug#end()
 
