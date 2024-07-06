@@ -3,13 +3,13 @@
 firewall-cmd --list-all
 开通ip port 
 0
-firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="10.0.0.1" port port="9307" protocol="tcp" accept"
+firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="[10.0.0.1]" port port="[9307]" protocol="tcp" accept"
 开启端口 
 0
-firewall-cmd --permanent --zone=public --add-port=21/tcp && firewall-cmd --reload
+firewall-cmd --permanent --zone=public --add-port=[21]/tcp && firewall-cmd --reload
 批量开通网段 
 0
-firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="192.168.0.0/16" accept" && firewall-cmd --reload
+firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="[192.168.0.0/16]" accept" && firewall-cmd --reload
 防火墙规则生效
 1
 firewall-cmd --reload && firewall-cmd --list-all 
@@ -35,14 +35,14 @@ systemctl enable firewalld && systemctl is-enabled firewalld
 1
 systemctl disable firewalld && systemctl is-enabled firewalld
 防火墙配置文件目录
-0
+1
 cd /etc/firewalld/zones
 禁止ip访问指定协议指定端口 
 0
-firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="192.168.100.1" port protocol="tcp" port="6379" reject"  && firewall-cmd --reload
+firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="[192.168.100.1]" port protocol="tcp" port="[6379]" reject"  && firewall-cmd --reload
 查看防火墙日志
 1
 journalctl -u firewalld
 双网卡转发
 0
-firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="10.0.0.1" port protocol="tcp" port="8306" accept" \rfirewall-cmd --permanent --add-forward-port=port=8306:proto=tcp:toport=8306:toaddr=38.0.0.1 
+firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="[10.0.0.1]" port protocol="tcp" port="[8306]" accept" \rfirewall-cmd --permanent --add-forward-port=port=[8306]:proto=tcp:toport=[8306]:toaddr=[38.0.0.1] 

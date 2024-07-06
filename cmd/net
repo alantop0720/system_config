@@ -7,3 +7,6 @@ netstat -ant
 非本机连我
 1
 ss -tan state established | awk '{print $4}' | grep -v '127' | sort
+ip
+1
+ip a | grep "inet "

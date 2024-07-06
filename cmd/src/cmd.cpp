@@ -6,12 +6,31 @@
 #include <unistd.h>
 #include <limits.h>
 
+
 // 定义一个结构体来存储每行的信息
 struct CommandInfo {
     std::string description;
     int flag;
     std::string command;
 };
+
+std::string replaceBracketedContent(const std::string& input) {
+    std::string output = input;
+    size_t startPos = 0;
+    while ((startPos = output.find('[', startPos))!= std::string::npos) {
+        size_t endPos = output.find(']', startPos);
+        if (endPos == std::string::npos) {
+            break;
+        }
+        std::string key = output.substr(startPos + 1, endPos - startPos - 1);
+        std::cout << "请输入 " << key << ": ";
+        std::string value;
+        std::cin >> value;
+        output.replace(startPos, endPos - startPos + 1, value);
+        startPos = endPos + value.size();
+    }
+    return output;
+}
 
 void displayCommandWithNewlines(const std::string& command) {
     for (size_t i = 0; i < command.size() - 1; ++i) {
@@ -91,6 +110,9 @@ int main(int argc, char *argv[]) {
         } else {
             //std::cout << it->command << std::endl;  // 在屏幕上显示命令
             displayCommandWithNewlines(it->command);
+			std::string output = replaceBracketedContent(it->command);
+			std::cout << output << std::endl;
+			std::system(output.c_str());
         }
     } else {
         std::cout << "无效的序列号" << std::endl;

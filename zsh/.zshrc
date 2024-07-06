@@ -103,3 +103,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
  PROMPT='%d >'
+ alias h='history'
+ alias home='cd /home'
+ alias etc='cd /etc'
+ alisa fhq=‘cmd fhq’
