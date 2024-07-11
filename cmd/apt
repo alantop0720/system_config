@@ -1,0 +1,33 @@
+列出所有可更新软件
+1
+apt update
+升级软件包
+1
+apt upgrade
+先删除要更新的软件包 再升级
+1
+apt full-upgrade
+安装指定软件
+0
+apt install [package_name]
+更新指定软件包
+0
+apt update [package_name]
+显示软件包信息
+0
+apt show [package_name]
+清理不在使用依赖和库文件
+1
+apt autoremove
+删除软件包
+0
+apt remove [package_name]
+查找软件包
+0
+apt search [package_name]
+列出所有安装的软件包
+1
+apt  list --installed
+列出所有已安装包的版本信息
+1
+apt list --all-version

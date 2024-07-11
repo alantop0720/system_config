@@ -1,0 +1,18 @@
+查看分区
+1
+lsblk
+查看磁盘uuid
+1
+blkid
+开机加载
+1
+vim /etc/fstab
+卸载卷
+0
+umount [/alantop]
+测试fstab自动挂载文件配置是否正确
+1
+mount -a
+手动挂载
+0
+mount [/dev/sdb1] [/alantop]

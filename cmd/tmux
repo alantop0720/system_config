@@ -7,3 +7,6 @@ tmux ls &&  tmux a -t [dufs]
 查看
 1
 tmux ls
+关闭会话
+0
+tmux kill-session -t [dufs]

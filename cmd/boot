@@ -1,0 +1,18 @@
+进入boot启动服务目录
+1
+vim /etc/systemd/system/my_service.service
+查看服务状态
+1
+systemctl status my_service
+查看服务启动状态
+1
+systemctl is-enabled my_service.service
+服务配置加载
+1
+systemctl daemon-reload
+启动服务
+1
+systemctl start my_service.service
+停止服务
+1
+systemctl stop my_service.service

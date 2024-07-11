@@ -1,0 +1,30 @@
+查询大于1G大小的文件
+1
+find / -type f -size +1G
+查询home目录大小
+0
+du -sh [/home]
+查看分区类型
+1
+df -T
+查看lvm
+1
+pvdisplay
+查看cpu体系
+1
+lscpu | grep Architecture
+查询系统版本
+1
+cat /etc/os-release && uname -a && cat /proc/version && /home/cmd/sh/system-info.sh
+查询系统支持的包管理
+1
+/home/cmd/sh/scan_package.sh
+查看麒麟银河版本 tecel sp1 sword sp2 lance sp3
+1
+cat /etc/kylin-release && nkvers &&  cat /etc/.productinfo
+统计一个进程打开了多少文件
+0
+lsof -p [processid] | wc -l
+查看文件打开数
+0
+ulimit

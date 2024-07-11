@@ -1,0 +1,75 @@
+查看镜像
+1
+docker images
+查看容器
+1
+docker ps
+查看容器 (所有))
+1
+docker ps -a
+停止容器
+0
+docker stop [id]
+删除镜像
+0
+docker rmi -f [id]
+docker信息
+1
+docker info
+重启docker服务
+1
+systemctl restart docker
+查看docker状态
+1
+systemctl status docker
+搜索镜像
+0
+docker search [ubuntu]
+拉取镜像
+0
+docker pull [ubuntu]
+查看镜像具体的版本
+0
+docker image inspect [ubuntu] | grep -i version
+查看容器内部进程信息
+0
+docker top [id]
+查看容器日志
+0
+docker logs [容器id ]
+查看容器 进入主进程
+0
+docker attach [id]
+查看容器 启动新进程 (退出 c+p+q))
+0
+docker exec -it [contaid_id] /bin/bash
+容器拷贝文件到主机
+0
+docker cp [容器id:容器文件路径] [主机路径]
+运行docker
+0
+docker run --name [dufs] -p 9022:9022 -p 9720:9720 -p 9000:9000  -v /mnt/dm-3:/disk1 -t -d  [imageid]
+查询docker占用空间
+1
+docker system df -v
+镜像保存
+0
+docker save -o [nginx.tar] [nginx:latest]
+镜像载入
+0
+docker load -i [nginx.tar]
+容器导出 文件小 不保留镜像历史
+0
+docker export -o [nginx.tar] [contaid_name]
+容器导入
+0
+docker import [nginx-test.tar] [nginx:imp]
+容器生成镜像
+0
+docker commit [contain] [image]
+构建镜像
+0
+docker build -t [repository]:[tag]
+删除所有容器
+1
+docker rm -f $(docker ps -aq)
