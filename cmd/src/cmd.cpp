@@ -54,6 +54,8 @@ int main(int argc, char *argv[]) {
             	std::cout << line << std::endl;
        		 }
         file.close();
+        
+        std::system("ls /home/cmd");
     } else {
         std::cerr << "无法打开文件readme" << std::endl;
         return 1;

@@ -15,7 +15,7 @@ pvdisplay
 lscpu | grep Architecture
 查询系统版本
 1
-cat /etc/os-release && uname -a && cat /proc/version && /home/cmd/sh/system-info.sh
+cat /etc/os-release && uname -a && cat /proc/version && /home/cmd/sh/system-info.sh && uname -p && uname -r
 查询系统支持的包管理
 1
 /home/cmd/sh/scan_package.sh

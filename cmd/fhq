@@ -3,7 +3,7 @@
 firewall-cmd --list-all
 开通ip port 
 0
-firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="[10.0.0.1]" port port="[9307]" protocol="tcp" accept"
+firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="[10.0.0.1]" port port="[9307]" protocol="tcp" accept" && firewall-cmd --reload
 开启端口 
 0
 firewall-cmd --permanent --zone=public --add-port=[21]/tcp && firewall-cmd --reload

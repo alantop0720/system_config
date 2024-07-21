@@ -18,7 +18,7 @@ docker信息
 docker info
 重启docker服务
 1
-systemctl restart docker
+systemctl daemon-reload && systemctl restart docker
 查看docker状态
 1
 systemctl status docker
@@ -48,7 +48,7 @@ docker exec -it [contaid_id] /bin/bash
 docker cp [容器id:容器文件路径] [主机路径]
 运行docker
 0
-docker run --name [dufs] -p 9022:9022 -p 9720:9720 -p 9000:9000  -v /mnt/dm-3:/disk1 -t -d  [imageid]
+docker run --name [dufs] -p 9022:9022 -p 9720:9720 -p 9000:9000/udp  -v /mnt/dm-3:/disk1 -t -d  [imageid]
 查询docker占用空间
 1
 docker system df -v
@@ -73,3 +73,9 @@ docker build -t [repository]:[tag]
 删除所有容器
 1
 docker rm -f $(docker ps -aq)
+后台启动 docker-compose up -d
+1
+docker-compose up -d
+查询镜像版本号
+0
+docker image inspect [redis:latest] | grep -i version

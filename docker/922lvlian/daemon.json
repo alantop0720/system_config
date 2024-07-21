@@ -1,0 +1,1 @@
+{"data-root":"/mnt/media_rw/78c7ff9e-543d-44d5-964d-442cbf5f514d/.ugreen_nas/6","bip":"172.17.0.1/24","log-level":"warn","iptables":true,"api-cors-header":"*","hosts":["unix:///var/run/docker.sock","tcp://127.0.0.1:9375"],"registry-mirrors":["https://docker.m.daocloud.io","https://huecker.io","https://dockerhub.timeweb.cloud","https://noohub.ru"]}
