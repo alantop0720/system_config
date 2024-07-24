@@ -13,6 +13,12 @@ set cindent
 set t_Co=256
 set tabstop=4
 set history=1000
+nnoremap h ^
+nnoremap l $
+nnoremap j gg
+nnoremap k G
+
+set mouse=c
 
 call plug#begin()
 
@@ -24,7 +30,4 @@ call plug#end()
 
 map <C-n> :NERDTreeToggle<CR>
 
-nnoremap h ^
-nnoremap l $
-nnoremap j gg
-nnoremap k G
+
