@@ -4,9 +4,25 @@ netstat -tnlp
 谁连我
 1
 netstat -ant
+查看本机udp端口
+1
+netstat -anu 
 非本机连我
 1
 ss -tan state established | awk '{print $4}' | grep -v '127' | sort
 ip
 1
 ip a | grep "inet "
+列出指定端口的进程
+0
+lsof -i:[port]
+列出进程打开的文件
+0
+lsof -pid [PID]
+列出指定目录下被进程打开的文件
+0
+lsof +D [/home]
+列出指定进程名打开的文件
+0
+lsof -c [process_name]
+
