@@ -1,6 +1,0 @@
-bindPort = 7000
-auth.method = "token"  
-auth.token = ""
-transport.tls.force = false 
-
-

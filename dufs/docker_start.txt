@@ -1,2 +1,0 @@
-
-docker run -v upload:/data -p 9720:5000 --rm -t -d sigoden/dufs /data --allow-upload --allow-search  -a alantop:passwd@/:rw

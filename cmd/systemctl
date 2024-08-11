@@ -1,0 +1,9 @@
+重新加载配置
+1
+systemctl daemon-reload
+设置开机启动
+0
+systemctl enable [vncserver@:1.service]
+查看是否开机启动
+0
+systemctl is-enabled [vncserver@:1.service]
