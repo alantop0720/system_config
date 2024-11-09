@@ -1,0 +1,9 @@
+关闭docker-compose
+1
+docker-compose down
+后台启动-compose
+1
+docker-compose up -d
+查看docker-compose日志
+1
+docker-compose logs

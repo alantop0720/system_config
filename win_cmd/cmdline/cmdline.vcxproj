@@ -82,13 +82,15 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>$(SolutionDir)$(Platform)\bin\$(Configuration)\</OutDir>
+    <OutDir>D:\mygit\bsjy\system_config\win_cmd\bin</OutDir>
     <IntDir>$(Platform)\tmp\$(Configuration)\</IntDir>
+    <TargetName>c</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>$(SolutionDir)$(Platform)\bin\$(Configuration)\</OutDir>
+    <OutDir>D:\mygit\bsjy\system_config\win_cmd\bin</OutDir>
     <IntDir>$(Platform)\tmp\$(Configuration)\</IntDir>
+    <TargetName>c</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

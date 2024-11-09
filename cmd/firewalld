@@ -46,3 +46,10 @@ journalctl -u firewalld
 双网卡转发
 0
 firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="[10.0.0.1]" port protocol="tcp" port="[8306]" accept" \rfirewall-cmd --permanent --add-forward-port=port=[8306]:proto=tcp:toport=[8306]:toaddr=[38.0.0.1] 
+防火墙加服务, 并重启
+0
+firewall-cmd --permanent --add-service=[http]  && firewall-cmd --reload
+防火删除服务, 并重启
+0
+firewall-cmd --permanent --remove-service=[http]  && firewall-cmd --reload 
+

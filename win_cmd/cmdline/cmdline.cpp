@@ -2,50 +2,130 @@
 #include <fstream>
 #include <string>
 #include <list>
+#include <sstream>
+#include <windows.h>
 
 // 定义一个结构体来存储每行的信息
-struct CommandInfo {
+struct CommandInfo
+{
     std::string description;
     int flag;
     std::string command;
 };
 
-void displayCommandWithNewlines(const std::string& command) {
-    for (size_t i = 0; i < command.size() - 1; ++i) {
-        if (command[i] == '\\' && command[i + 1] == 'r') {
-            std::cout << std::endl;
-            ++i;  // 跳过第二个 '\r'
+// 替换方括号内内容的函数，修改为可处理多个方括号
+std::string replaceBracketedContent(const std::string& input) {
+    std::string output = input;
+    size_t startPos = 0;
+    while ((startPos = output.find('[', startPos)) != std::string::npos) {
+        size_t endPos = output.find(']', startPos);
+        if (endPos == std::string::npos) {
+            break;
         }
-        else {
+        std::string key = output.substr(startPos + 1, endPos - startPos - 1);
+        std::cout << "请输入 " << key << ": ";
+        std::string value;
+        std::cin >> value;
+        output.replace(startPos, endPos - startPos + 1, value);
+        startPos = endPos + value.size();
+    }
+    return output;
+}
+
+//std::string replaceBracketedContent(const std::string& input)
+//{
+//    std::string output = input;
+//    size_t startPos = 0;
+//    while ((startPos = output.find('[', startPos)) != std::string::npos)
+//    {
+//        size_t endPos = output.find(']', startPos);
+//        if (endPos == std::string::npos)
+//        {
+//            break;
+//        }
+//        std::string key = output.substr(startPos + 1, endPos - startPos - 1);
+//        std::cout << "请输入 " << key << ": ";
+//        std::string value;
+//        std::cin >> value;
+//        output.replace(startPos, endPos - startPos + 1, value);
+//        startPos = endPos + value.size();
+//    }
+//    return output;
+//}
+
+void displayCommandWithNewlines(const std::string& command)
+{
+    for (size_t i = 0; i < command.size() - 1; ++i)
+    {
+        if (command[i] == '\\' && command[i + 1] == 'r')
+        {
+            std::cout << std::endl;
+            ++i; // 跳过第二个 '\r'
+        }
+        else
+        {
             std::cout << command[i];
         }
     }
-    std::cout << command.back() << std::endl;  // 输出最后一个字符
+    std::cout << command.back() << std::endl; // 输出最后一个字符
 }
 
-int main(int argc, char* argv[]) {
-    if (argc == 1) {
-        std::ifstream file("readme");
-        if (file.is_open()) {
+int main(int argc, char* argv[])
+{
+
+
+ 
+    TCHAR currentDir[MAX_PATH];
+    DWORD length = GetCurrentDirectory(MAX_PATH, currentDir);
+
+    if (length > 0)
+    {
+        // 估算转换后所需字节数
+        int targetSize = WideCharToMultiByte(CP_ACP, 0, currentDir, -1, NULL, 0, NULL, NULL);
+
+        // 创建目标缓冲区
+        //char *convertedDir=[targetSize];
+
+        char* convertedDir = new char[targetSize];
+
+        // 执行转换操作
+        WideCharToMultiByte(CP_ACP, 0, currentDir, -1, convertedDir, targetSize, NULL, NULL);
+
+        std::cout << "当前工作目录：" << convertedDir << std::endl;
+
+        delete[]convertedDir;
+    }
+    else
+    {
+        std::cerr << "获取当前工作目录失败！" << std::endl;
+    }
+
+    if (argc == 1)
+    {
+        std::ifstream file("readme.txt");
+        if (file.is_open())
+        {
             std::string line;
-            while (std::getline(file, line)) {
+            while (std::getline(file, line))
+            {
                 std::cout << line << std::endl;
             }
             file.close();
         }
-        else {
-            std::cerr << "无法打开文件 readme" << std::endl;
+        else
+        {
+            std::cerr << "无法打开文件 readme.txt" << std::endl;
             return 1;
         }
         return 0;
     }
-
     std::string argName = argv[1];
-    std::string output = argName;  // Windows 下的文件路径
+    std::string output = argName;
     std::list<CommandInfo> commandList;
-    std::ifstream file(output);  // 替换为实际的文件名
+    std::ifstream file(output);
 
-    if (!file.is_open()) {
+    if (!file.is_open())
+    {
         std::cerr << "无法打开文件" << std::endl;
         return 1;
     }
@@ -53,15 +133,17 @@ int main(int argc, char* argv[]) {
     std::string line;
     int lineCount = 1;
     CommandInfo info;
-    int sequenceNumber = 1;  // 序列号
+    int sequenceNumber = 1; // 序列号
 
-    while (std::getline(file, line)) {
-        switch (lineCount) {
+    while (std::getline(file, line))
+    {
+        switch (lineCount)
+        {
         case 1:
             info.description = line;
             break;
         case 2:
-            info.flag = std::stoi(line);  // 将字符串转换为整数
+            info.flag = std::stoi(line); // 将字符串转换为整数
             break;
         case 3:
             info.command = line;
@@ -81,22 +163,25 @@ int main(int argc, char* argv[]) {
     std::cin >> choice;
 
     auto it = commandList.begin();
-    std::advance(it, choice - 1);  // 将迭代器移动到用户选择的位置
+    std::advance(it, choice - 1); // 将迭代器移动到用户选择的位置
 
-    if (it != commandList.end()) {
-        displayCommandWithNewlines(it->command);
-    }
-    else if (it != commandList.end()) {
-        if (it->flag == 1) {
-            // 在 Windows 下执行命令，可能需要根据实际情况进行调整
-            // 这里只是一个示例，可能需要根据具体的命令和环境进行修改
-            std::system(it->command.c_str());
+    if (it != commandList.end())
+    {
+        if (it->flag == 1)
+        {
+            system(it->command.c_str());
         }
-        else {
-            std::cout << it->command << std::endl;  // 在屏幕上显示命令
+        else
+        {
+            // std::cout << it->command << std::endl; // 在屏幕上显示命令
+            displayCommandWithNewlines(it->command);
+            std::string output = replaceBracketedContent(it->command);
+            std::cout << output << std::endl;
+            system(output.c_str());
         }
     }
-    else {
+    else
+    {
         std::cout << "无效的序列号" << std::endl;
     }
 

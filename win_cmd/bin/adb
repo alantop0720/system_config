@@ -1,0 +1,45 @@
+adb 连接 adb 
+1
+adb connect 25.105.230.3
+断开adb
+1
+adb disconnect 25.105.230.3
+安装apk 启动 同步
+1
+adb install -r wrcs_release_27_157.apk && adb shell am start com.lamy.aiserver.app/.activity.LoginActivity && adb shell sync
+删除app
+1
+adb uninstall com.lamy.aiserver.app
+重启
+1
+adb reboot
+查看连接设备
+1
+adb devices
+拷贝日志
+1
+adb
+拷贝图片
+1
+adb 
+主屏
+1
+adb shell input keyevent 3
+网卡
+1
+adb shell am start -a android.settings.WIRELESS_SETTINGS
+tools
+1
+adb shell am start com.asi.tools/.activity.MainActivity
+看调试日志
+1
+adb pull sdcard/log/2024-11-08
+查看设备图片
+1
+adb shell ls /storage/emulated/0/persons/
+下载设备图片
+1
+adb pull /storage/emulated/0/persons/
+亮屏 息屏
+1
+adb shell input keyevent 26

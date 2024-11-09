@@ -1,0 +1,3 @@
+杀掉指定进程
+0
+taskkill /im [FlashHelperService.exe] /f [/t]

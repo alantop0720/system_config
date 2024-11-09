@@ -1,3 +1,0 @@
-cp ../cmd /usr/bin/cmd
-rm ../cmd
-chmod 700 /home/cmd/sh/*.*
