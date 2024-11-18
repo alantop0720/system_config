@@ -1,6 +1,6 @@
 all:
-	g++ cmd.cpp -o cmd
+	g++ cmd.cpp -o c
 clean:
-	rm cmd
+	rm c
 install:
-	cp cmd /usr/local/bin/cmd && chmod 700 /home/cmd/sh/*.*
+	cp c /usr/local/bin/c && chmod 700 /home/cmd/sh/*.*

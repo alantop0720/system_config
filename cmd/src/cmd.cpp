@@ -108,6 +108,7 @@ int main(int argc, char *argv[]) {
 
     if (it!= commandList.end()) {
         if (it->flag == 1) {
+		    std::cout << it->command << std::endl;
             std::system(it->command.c_str());  // 在 Linux 下执行命令
         } else {
             //std::cout << it->command << std::endl;  // 在屏幕上显示命令

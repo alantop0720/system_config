@@ -1,1 +1,4 @@
 *.pdb
+**/.vs
+**/tmp
+win_cmd/x64

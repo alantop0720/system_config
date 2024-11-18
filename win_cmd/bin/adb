@@ -43,3 +43,9 @@ adb pull /storage/emulated/0/persons/
 亮屏 息屏
 1
 adb shell input keyevent 26
+删除应用 和 缓存
+1
+adb shell pm clear com.lamy.aiserver.app
+启动apk
+1
+adb shell am start com.lamy.aiserver.app/.activity.LoginActivity
