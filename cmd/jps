@@ -1,0 +1,9 @@
+显示java进程
+1
+jps
+显示指定进程
+0
+pgrep [java]
+显示详细指定进程
+0
+ps -ax | grep [java]
