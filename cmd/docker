@@ -79,3 +79,6 @@ docker-compose up -d
 查询镜像版本号
 0
 docker image inspect [redis:latest] | grep -i version
+查询镜像占用磁盘空间
+0
+docker system df

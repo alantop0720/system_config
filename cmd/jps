@@ -7,3 +7,6 @@ pgrep [java]
 显示详细指定进程
 0
 ps -ax | grep [java]
+显示详细指定进程
+0
+pidof [java]

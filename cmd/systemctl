@@ -7,3 +7,15 @@ systemctl enable [vncserver@:1.service]
 查看是否开机启动
 0
 systemctl is-enabled [vncserver@:1.service]
+查看运行的服务
+1
+systemctl list-units --type=service --state=running
+查看是字符启动还是图形启动
+1
+systemctl get-default
+设置字符启动
+1
+systemctl set-default multi-user.target
+设备图形启动
+1
+systemctl set-default graphical.target
