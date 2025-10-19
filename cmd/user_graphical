@@ -1,0 +1,12 @@
+查询默认启动状态
+1
+systemctl get-default
+设置字符启动
+1
+systemctl set-default multi-user.target
+设置图形界面
+1
+systemctl set-default graphical.target
+字符下启动图形界面
+1
+startx

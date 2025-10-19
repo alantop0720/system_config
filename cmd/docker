@@ -7,6 +7,9 @@ docker ps
 查看容器 (所有))
 1
 docker ps -a
+删除指定容器
+0
+docker rm -f [容器名称/ID]
 停止容器
 0
 docker stop [id]
@@ -40,7 +43,7 @@ docker logs [容器id ]
 查看容器 进入主进程
 0
 docker attach [id]
-查看容器 启动新进程 (退出 c+p+q))
+查看容器 启动新进程,进程不会中断 (退出 c+p+q))
 0
 docker exec -it [contaid_id] /bin/bash
 容器拷贝文件到主机

@@ -19,3 +19,9 @@ systemctl set-default multi-user.target
 设备图形启动
 1
 systemctl set-default graphical.target
+查看已加载服务
+1
+systemctl list-units --type=service
+查看开机启动项
+1
+systemctl list-unit-files --type=service --state=enabled

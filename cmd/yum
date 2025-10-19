@@ -16,9 +16,12 @@ yum list
 删除软件包命令
 0
 yum remove [package_name]
-查找软件包命令
+查找仓库里面是否有某个软件包 yum search [keyword]
 0
 yum search [keyword]
 清除缓存命令
 1
 yum clean
+查看已经安装的包 yum list installed | grep -i openvpn 或 rpm -qa | grep -i vpn
+0
+yum list installed | grep -i [package]

@@ -7,3 +7,6 @@ docker-compose up -d
 查看docker-compose日志
 1
 docker-compose logs
+重启docker-compose
+1
+docker-compose down & docker-compose up -d

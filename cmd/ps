@@ -4,3 +4,6 @@ ps aux --sort -%cpu | more
 查看内存占比大的
 1
 ps aux --sort -%mem | more
+列出java程序
+1
+pgrep java
