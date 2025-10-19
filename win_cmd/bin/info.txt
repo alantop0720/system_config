@@ -1,0 +1,159 @@
+采集时间：2024-12-12 14:25:06
+硬件配置信息：
+主板型号：HUAWEI NBLB-WAX9N-PCB M1050
+CPU型号：Intel(R) Core(TM) i7-10510U CPU @ 1.80GHz
+网卡型号：
+    SoloPaceGem：SoloPaceGem Tunnel (100.0 Gbps)
+    本地连接* 12：Microsoft Wi-Fi Direct Virtual Adapter #4 (9223372036.9 Gbps)
+    WLAN：Intel(R) Wireless-AC 9560 160MHz (0.1 Gbps)
+
+内存总容量：15.8 GB
+已安装内存条数量：2
+    1号内存：Samsung 8.0GB 2667MHz DDR
+    2号内存：Samsung 8.0GB 2667MHz DDR
+硬盘型号：WDC PC SN730 SDBPNTY-512G-1027
+硬盘容量：476.10 GB
+硬盘序列号：E823_8FA6_BF53_0001_001B_444A_4407_B9AE.
+网卡信息：
+  SoloPaceGem：
+    IP地址：10.0.0.232
+    子网掩码：255.255.255.255
+  本地连接* 12：
+    IP地址：192.168.137.1
+    子网掩码：255.255.255.0
+  WLAN：
+    IP地址：192.168.2.201
+    子网掩码：255.255.255.0
+  Teredo Tunneling Pseudo-Interface：
+
+系统信息：
+主机名：huawei
+网络配置：
+接口名称：SoloPaceGem
+  网关：192.168.2.1
+  DNS服务器：
+    未配置
+  NTP服务器：time.windows.com, time.nist.gov, 25.105.230.157
+接口名称：本地连接* 12
+  网关：192.168.2.1
+  DNS服务器：
+    未配置
+  NTP服务器：time.windows.com, time.nist.gov, 25.105.230.157
+接口名称：WLAN
+  网关：192.168.2.1
+  DNS服务器：
+    192.168.2.1
+  NTP服务器：time.windows.com, time.nist.gov, 25.105.230.157
+接口名称：Teredo Tunneling Pseudo-Interface
+  网关：192.168.2.1
+  DNS服务器：
+    未配置
+  NTP服务器：time.windows.com, time.nist.gov, 25.105.230.157
+
+
+采集时间：2024-12-12 14:29:50
+硬件配置信息：
+主板型号：HUAWEI NBLB-WAX9N-PCB M1050
+CPU型号：Intel(R) Core(TM) i7-10510U CPU @ 1.80GHz
+网卡型号：
+    SoloPaceGem：SoloPaceGem Tunnel (100.0 Gbps)
+    本地连接* 12：Microsoft Wi-Fi Direct Virtual Adapter #4 (9223372036.9 Gbps)
+    WLAN：Intel(R) Wireless-AC 9560 160MHz (0.1 Gbps)
+
+内存总容量：15.8 GB
+已安装内存条数量：2
+    1号内存：Samsung 8.0GB 2667MHz DDR4
+    2号内存：Samsung 8.0GB 2667MHz DDR4
+硬盘型号：WDC PC SN730 SDBPNTY-512G-1027
+硬盘容量：476.10 GB
+硬盘序列号：E823_8FA6_BF53_0001_001B_444A_4407_B9AE.
+网卡信息：
+  SoloPaceGem：
+    IP地址：10.0.0.232
+    子网掩码：255.255.255.255
+  本地连接* 12：
+    IP地址：192.168.137.1
+    子网掩码：255.255.255.0
+  WLAN：
+    IP地址：192.168.2.201
+    子网掩码：255.255.255.0
+  Teredo Tunneling Pseudo-Interface：
+
+系统信息：
+主机名：huawei
+网络配置：
+接口名称：SoloPaceGem
+  网关：192.168.2.1
+  DNS服务器：
+    未配置
+  NTP服务器：time.windows.com, time.nist.gov, 25.105.230.157
+接口名称：本地连接* 12
+  网关：192.168.2.1
+  DNS服务器：
+    未配置
+  NTP服务器：time.windows.com, time.nist.gov, 25.105.230.157
+接口名称：WLAN
+  网关：192.168.2.1
+  DNS服务器：
+    192.168.2.1
+  NTP服务器：time.windows.com, time.nist.gov, 25.105.230.157
+接口名称：Teredo Tunneling Pseudo-Interface
+  网关：192.168.2.1
+  DNS服务器：
+    未配置
+  NTP服务器：time.windows.com, time.nist.gov, 25.105.230.157
+
+
+采集时间：2024-12-12 14:34:06
+硬件配置信息：
+主板型号：HUAWEI NBLB-WAX9N-PCB M1050
+CPU型号：Intel(R) Core(TM) i7-10510U CPU @ 1.80GHz
+网卡型号：
+    SoloPaceGem：SoloPaceGem Tunnel (100.0 Gbps)
+    本地连接* 12：Microsoft Wi-Fi Direct Virtual Adapter #4 (9223372036.9 Gbps)
+    WLAN：Intel(R) Wireless-AC 9560 160MHz (0.1 Gbps)
+
+内存总容量：15.8 GB
+已安装内存条数量：2
+    1号内存：Samsung 8.0GB 2667MHz DDR4
+    2号内存：Samsung 8.0GB 2667MHz DDR4
+硬盘型号：WDC PC SN730 SDBPNTY-512G-1027
+硬盘容量：476.10 GB
+硬盘序列号：E823_8FA6_BF53_0001_001B_444A_4407_B9AE.
+网卡信息：
+  SoloPaceGem：
+    IP地址：10.0.0.232
+    子网掩码：255.255.255.255
+  本地连接* 12：
+    IP地址：192.168.137.1
+    子网掩码：255.255.255.0
+  WLAN：
+    IP地址：192.168.2.201
+    子网掩码：255.255.255.0
+  Teredo Tunneling Pseudo-Interface：
+
+系统信息：
+主机名：huawei
+网络配置：
+接口名称：SoloPaceGem
+  网关：192.168.2.1
+  DNS服务器：
+    未配置
+  NTP服务器：time.windows.com, time.nist.gov, 25.105.230.157
+接口名称：本地连接* 12
+  网关：192.168.2.1
+  DNS服务器：
+    未配置
+  NTP服务器：time.windows.com, time.nist.gov, 25.105.230.157
+接口名称：WLAN
+  网关：192.168.2.1
+  DNS服务器：
+    192.168.2.1
+  NTP服务器：time.windows.com, time.nist.gov, 25.105.230.157
+接口名称：Teredo Tunneling Pseudo-Interface
+  网关：192.168.2.1
+  DNS服务器：
+    未配置
+  NTP服务器：time.windows.com, time.nist.gov, 25.105.230.157
+
+

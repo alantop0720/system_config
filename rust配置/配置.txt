@@ -1,0 +1,4 @@
+      "console": "integratedTerminal",
+      
+      
+          "rust": "cd $dir && rustc $fileName && $dir$fileNameWithoutExt",
