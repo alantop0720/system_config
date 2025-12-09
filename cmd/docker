@@ -40,9 +40,6 @@ docker top [id]
 查看容器日志
 0
 docker logs [容器id ]
-查看容器 进入主进程
-0
-docker attach [id]
 查看容器 启动新进程,进程不会中断 (退出 c+p+q))
 0
 docker exec -it [contaid_id] /bin/bash
@@ -76,12 +73,18 @@ docker build -t [repository]:[tag]
 删除所有容器
 1
 docker rm -f $(docker ps -aq)
-后台启动 docker-compose up -d
-1
-docker-compose up -d
 查询镜像版本号
 0
 docker image inspect [redis:latest] | grep -i version
 查询镜像占用磁盘空间
-0
+1
 docker system df
+查看镜像是否支持arm
+0
+docker inspect [your-image:tag] | grep Architecture
+拉去arm版本镜像
+0
+docker pull --platform linux/arm64 [<镜像名>:<标签>]
+重命名
+0
+docker tag [819f53017d76] [centos65:6.5]

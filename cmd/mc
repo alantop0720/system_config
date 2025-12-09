@@ -1,0 +1,24 @@
+起别名
+0
+mc alias set [myio] [http://localhost:9000]
+新建桶
+0
+mc.exe mb [myaistor/data]
+拷贝文件
+0
+mc.exe cp [C:\somefile.txt myaistor/data]
+拷贝文件
+0
+mc.exe cp [C:\somefile.txt myaistor/data]
+查看别名
+1
+mc alias list
+查看桶
+0
+mc ls [myminio]
+查看桶文件
+0
+mc ls [myminio/mytest]
+删除桶
+0
+mc rb [myminio/data]

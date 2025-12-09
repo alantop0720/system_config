@@ -4,6 +4,12 @@ firewall-cmd --list-all
 开通ip port 
 0
 firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="[10.0.0.1]" port port="[9307]" protocol="tcp" accept" && firewall-cmd --reload
+删除已开通ip port 
+0
+firewall-cmd --permanent --zone=public --remove-rich-rule='rule family="ipv4" source address="[38.120.0.5]" port port="[8179]" protocol="tcp" accept' && firewall-cmd --reload
+删除服务
+0
+firewall-cmd --permanent --zone=public --remove-service=[ssh] && firewall-cmd --reload
 开启端口 
 0
 firewall-cmd --permanent --zone=public --add-port=[21]/tcp && firewall-cmd --reload

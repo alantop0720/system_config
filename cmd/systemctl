@@ -25,3 +25,6 @@ systemctl list-units --type=service
 查看开机启动项
 1
 systemctl list-unit-files --type=service --state=enabled
+查看服务日志: systemctl -u [nginx] -n 50
+0
+systemctl -u [nginx] -n 50
