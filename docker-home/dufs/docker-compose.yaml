@@ -1,0 +1,10 @@
+version: '3'
+services:
+  dufs:
+    image: sigoden/dufs
+    ports:
+      - '9720:5000'
+    volumes:
+      - /volume1/:/data
+    command: /data  --allow-upload --allow-search -a alantop:Mqjy2024.@/:rw
+    restart: always

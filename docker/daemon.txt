@@ -1,0 +1,24 @@
+{
+    "registry-mirrors": [
+        "https://ustc-edu-cn.mirror.aliyuncs.com/",
+        "https://ccr.ccs.tencentyun.com/",
+        "https://docker.m.daocloud.io/"
+    ]
+}
+
+https://dockerhub.icu
+
+sudo mkdir -p /etc/docker
+sudo tee /etc/docker/daemon.json <<-'EOF'
+{
+    "registry-mirrors": [
+        "https://docker.m.daocloud.io",
+        "https://huecker.io",
+        "https://dockerhub.timeweb.cloud",
+        "https://noohub.ru"
+    ]
+}
+EOF
+sudo systemctl daemon-reload
+sudo systemctl restart docker
+

@@ -1,0 +1,4 @@
+*.pdb
+**/.vs
+**/tmp
+win_cmd/x64docker-home/nginx/nginx1.29.3.tar.gz 

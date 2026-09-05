@@ -1,0 +1,3 @@
+开机信息
+1
+cat /etc/issue.net && cat /etc/motd && cat /etc/issue && ls /etc/motd.d && cd /etc/motd.d

@@ -1,0 +1,30 @@
+查看 ip : ip a
+1
+ip a
+启用某个网卡: ip link set [eth0] up
+0
+ip link set [eth0] up
+禁用某个网卡:ip link set [eth0] down
+0
+ip link set [eth0] down
+配置ip地址: ip addr add [192.168.1.10/24] dev [eth0]
+0
+ip addr add [192.168.1.10/24] dev [eth0]
+删除ip地址: ip addr del [192.168.1.10/24] dev [eth0]
+0
+删除ip地址: ip addr del [192.168.1.10/24] dev [eth0]
+查看路由表: ip r
+1
+ip r
+增加静态路由:ip route add [10.0.0.0/8] via [192.168.1.1]
+0
+ip route add [10.0.0.0/8] via [192.168.1.1]
+删除路由:ip route del [10.0.0.0/8]
+0
+ip route del [10.0.0.0/8]
+设置网关:ip route add default via [192.168.1.1]
+0
+ip route add default via [192.168.1.1]
+查看那个接口上线: ip l
+1
+ip l

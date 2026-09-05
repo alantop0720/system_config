@@ -1,0 +1,6 @@
+增加定时任务
+1
+crontab -e
+查看定时任务日志
+1
+vim /var/log/cron

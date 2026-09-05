@@ -1,0 +1,3 @@
+查看日志支持的服务
+1
+ls /usr/share/logwatch/scripts/services

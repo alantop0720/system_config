@@ -1,0 +1,6 @@
+后台运行程序 nohup ./[app] > nohup.log 2>&1 &
+0
+nohup ./[app] > nohup.log 2>&1 &
+查看后台程序 jobs
+1
+jobs

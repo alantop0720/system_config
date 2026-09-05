@@ -1,0 +1,6 @@
+从服务器发送文件到本地
+0
+sz -be [filename]
+将本地文件上传到服务器
+0
+rz -be [filename]

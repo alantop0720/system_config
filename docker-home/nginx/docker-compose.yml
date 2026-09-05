@@ -1,0 +1,15 @@
+version: '3'  # 兼容大多数 Docker 版本的 compose 语法版本
+
+services:
+  mynginx:  # 服务名（对应 --name mynginx）
+    image: d261fd19cb63  # 使用的镜像（默认 latest 版本，如需指定版本可写 nginx:1.25）
+    container_name: nginx  # 容器名称
+    restart: always  # 重启策略（对应 --restart always）
+    ports:
+      - "80:80"  # 端口映射（对应 -p 80:80）
+    volumes:
+      # 配置文件挂载（对应 -v 参数）
+      - ./conf/nginx.conf:/etc/nginx/nginx.conf
+      - ./conf/conf.d:/etc/nginx/conf.d
+      - ./html:/usr/share/nginx/html
+      - ./logs:/var/log/nginx

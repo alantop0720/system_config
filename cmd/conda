@@ -1,0 +1,9 @@
+conda deactivate
+1
+conda deactivate
+conda activate 
+0
+conda activate [base]
+显示conda坏境
+1
+conda env list

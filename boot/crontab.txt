@@ -1,0 +1,2 @@
+*/10 * * * * /usr/sbin/ntpdate time.windows.com && hwclock -w
+@reboot sleep 60 ;cd /home/op/ && sh stop.sh && sh start.sh

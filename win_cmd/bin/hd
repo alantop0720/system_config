@@ -1,0 +1,3 @@
+查看硬盘是否是ssd
+1
+powershell.exe -Command Get-PhysicalDisk

@@ -1,0 +1,12 @@
+[Unit]
+Description=My service
+After=network.target
+
+[Service]
+ExecStart=/usr/sbin/runuser -l root -c "ls > /home/test3" 
+ExecStop=ls 
+SuccessAction=ls
+Type=simple
+
+[Install]
+WantedBy=default.target

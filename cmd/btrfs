@@ -1,0 +1,3 @@
+查看btrfs空间 btrfs filesystem df /mnt/btrfs-raid1
+1
+btrfs filesystem df /mnt/btrfs-raid1

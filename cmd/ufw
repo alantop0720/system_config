@@ -1,0 +1,32 @@
+查询防火墙状态
+1
+ufw status
+开放端口
+0
+ufw allow [22/tcp]
+拒绝端口tcp+udp
+0
+ufw deny [22]
+启动防火墙
+1
+ufw enable
+关闭防火墙
+1
+ufw disable
+重载防火墙
+1
+ufw reload
+查看
+1
+sudo ufw status numbered
+删除
+0
+sudo ufw delete [5]
+允许ip 端口 tcp
+0
+sudo ufw delete allow from [10.2.3.5] to any port [5000] proto [tcp]
+
+
+
+
+

@@ -1,0 +1,12 @@
+修改默认shell为zsh
+1
+chsh -s /bin/zsh
+查看系统支持的shell
+1
+cat /etc/shells
+查看zsh版本
+1
+yum info zsh
+查看当前是那一个shell
+1
+echo $0:

@@ -1,0 +1,3 @@
+开启cockpit 服务端口 9090
+1
+systemctl start cockpit.socket && systemctl enable –now cockpit.socket

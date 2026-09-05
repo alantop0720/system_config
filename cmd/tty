@@ -1,0 +1,12 @@
+查看登录用户
+1
+w
+查看自己的终端
+1
+tty
+查看终端对应的pid
+0
+ps -t /dev/pts/[1]
+kill指定pid的终端
+0
+kill -9 [pid]

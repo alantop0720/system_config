@@ -1,0 +1,3 @@
+给文件名杀进程
+0
+taskkill /im [file.exe] /f /t

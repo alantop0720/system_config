@@ -1,0 +1,6 @@
+清除缓存
+1
+sync && echo 1 > /proc/sys/vm/drop_caches
+查看系统有多少内存
+1
+free -h
