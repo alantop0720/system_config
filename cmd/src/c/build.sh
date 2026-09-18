@@ -1,1 +1,0 @@
-gcc cmd.c -o cmd

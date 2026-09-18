@@ -1,14 +1,21 @@
-更新日期2026.09.06
-配置文件说明:
-1为直接执行，0为自定义参数，可输入变量。
+更新日期2026.09.18
+
+安装方法：
+程序拷贝到/opt/cmd
+进入目录/opt/cmd/src
+gcc cmd.c -o cmd
+
+.bashrc 最后一行增加如下：
+export PATH=/opt/cmd/src:$PATH
+
+source .bashrc
 
 用法:
 cmd 菜单名 交互选择菜单项
 cmd 菜单名 序号 直接执行对应菜单项，例如 cmd dhcp 1
 
-程序拷贝到/opt/cmd
-进入目录/opt/cmd/src/c
-运行make && make install
+/opt/cmd 下文件都是配置命令，可自定义扩展
+扩展命令配置文件说明:
+1为直接执行，0为自定义参数，可输入变量。
 
--u 为ubuntu系统
 

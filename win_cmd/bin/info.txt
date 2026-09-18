@@ -204,3 +204,52 @@ CPU型号：Intel(R) Core(TM) i7-10510U CPU @ 1.80GHz
   NTP服务器：time.windows.com, time.nist.gov, 10.2.15.168
 
 
+采集时间：2026-09-16 14:51:44
+硬件配置信息：
+主板型号：HUAWEI NBLB-WAX9N-PCB M1050
+CPU型号：Intel(R) Core(TM) i7-10510U CPU @ 1.80GHz
+网卡型号：
+    以太网：Realtek Gaming USB 2.5GbE Family Controller (1.0 Gbps)
+    OpenVPN Data Channel Offload：OpenVPN Data Channel Offload (1.0 Gbps)
+    wireless：Intel(R) Wireless-AC 9560 160MHz (0.1 Gbps)
+
+内存总容量：15.8 GB
+已安装内存条数量：2
+    1号内存：Samsung 8.0GB 2667MHz DDR4
+    2号内存：Samsung 8.0GB 2667MHz DDR4
+硬盘型号：WDC PC SN730 SDBPNTY-512G-1027
+硬盘容量：476.10 GB
+硬盘序列号：E823_8FA6_BF53_0001_001B_444A_4407_B9AE.
+网卡信息：
+  以太网：
+    IP地址：192.168.1.5
+    子网掩码：255.255.255.0
+    IP地址：192.168.2.15
+    子网掩码：255.255.255.0
+  OpenVPN Data Channel Offload：
+    IP地址：10.8.0.6
+    子网掩码：255.255.255.0
+  wireless：
+    IP地址：10.151.220.185
+    子网掩码：255.255.255.0
+
+系统信息：
+主机名：pos
+网络配置：
+接口名称：以太网
+  网关：10.151.220.4
+  DNS服务器：
+    未配置
+  NTP服务器：time.windows.com, time.nist.gov, 192.168.10.24
+接口名称：OpenVPN Data Channel Offload
+  网关：10.151.220.4
+  DNS服务器：
+    未配置
+  NTP服务器：time.windows.com, time.nist.gov, 192.168.10.24
+接口名称：wireless
+  网关：10.151.220.4
+  DNS服务器：
+    未配置
+  NTP服务器：time.windows.com, time.nist.gov, 192.168.10.24
+
+

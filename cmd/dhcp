@@ -16,3 +16,6 @@ dhcp-lease-list
 检查dhcp配置文件是否有语法问题
 1
 dhcpd -t -cf /etc/dhcp/dhcpd.conf
+查看10分钟之前到现在的日志
+1
+journalctl -u isc-dhcp-server --since "10 minutes ago"

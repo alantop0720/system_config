@@ -28,3 +28,6 @@ systemctl list-unit-files --type=service --state=enabled
 查看服务日志: systemctl -u [nginx] -n 50
 0
 systemctl -u [nginx] -n 50
+查看当前已经加载的服务
+1
+systemctl list-units --type=service
